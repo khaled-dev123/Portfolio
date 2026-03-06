@@ -1,11 +1,16 @@
 import { motion } from "framer-motion";
-import { GraduationCap, Brain, Building2, Rocket } from "lucide-react";
+import { GraduationCap, Brain, Building2, Rocket, Users, Monitor, Download } from "lucide-react";
 
 const highlights = [
   { icon: GraduationCap, text: "Final-year CS @ Université Badji Mokhtar, Annaba" },
   { icon: Brain, text: "Self-taught AI agent architecture & data engineering" },
   { icon: Building2, text: "Member, AI & Robotics Association of Annaba Wilaya" },
   { icon: Rocket, text: "Goal: Build AI systems that matter, then build a startup" },
+];
+
+const memberships = [
+  { icon: Users, text: "Member, AI and Robotics Association of Annaba Wilaya — government-recognized organization promoting AI innovation in Algeria" },
+  { icon: Monitor, text: "Member, Computer Science Club at Université Badji Mokhtar, Annaba" },
 ];
 
 const AboutSection = () => {
