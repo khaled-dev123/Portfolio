@@ -85,6 +85,39 @@ const AboutSection = () => {
             ))}
           </motion.div>
         </div>
+
+        {/* Memberships & Activities */}
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.7, delay: 0.2 }}
+          className="mt-20"
+        >
+          <p className="text-sm font-mono text-primary mb-3 tracking-wider uppercase">
+            // Memberships & Activities
+          </p>
+          <h3 className="text-2xl md:text-3xl font-bold mb-8">
+            Community & <span className="text-gradient">Engagement</span>
+          </h3>
+          <div className="grid md:grid-cols-2 gap-4">
+            {memberships.map((m, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.1 + i * 0.1 }}
+                className="flex items-start gap-4 p-5 rounded-xl border border-border bg-card/50 card-hover"
+              >
+                <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center shrink-0 mt-0.5">
+                  <m.icon size={20} className="text-primary" />
+                </div>
+                <p className="text-muted-foreground">{m.text}</p>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
       </div>
     </section>
   );
