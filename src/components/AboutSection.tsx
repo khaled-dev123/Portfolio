@@ -49,12 +49,15 @@ const AboutSection = () => {
               and NoSQL Big Data pipelines.
             </p>
 
-            {/* CV Placeholder */}
-            <div className="mt-8 p-6 rounded-2xl border border-dashed border-primary/30 bg-primary/5 flex flex-col items-center gap-3">
-              <p className="text-sm text-muted-foreground">📄 Resume / CV</p>
-              <div className="px-6 py-3 rounded-xl bg-primary/10 border border-primary/20 text-primary text-sm font-medium">
-                Coming Soon — Check back later
-              </div>
+            <div className="mt-8">
+              <a
+                href="/Ramdani_Khaled_CV.pdf"
+                download
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-primary text-primary-foreground font-medium hover:bg-primary/90 transition-colors"
+              >
+                <Download size={18} />
+                Download CV / Resume
+              </a>
             </div>
           </motion.div>
 
