@@ -1,11 +1,16 @@
 import { motion } from "framer-motion";
-import { GraduationCap, Brain, Building2, Rocket } from "lucide-react";
+import { GraduationCap, Brain, Building2, Rocket, Users, Monitor, Download } from "lucide-react";
 
 const highlights = [
   { icon: GraduationCap, text: "Final-year CS @ Université Badji Mokhtar, Annaba" },
   { icon: Brain, text: "Self-taught AI agent architecture & data engineering" },
   { icon: Building2, text: "Member, AI & Robotics Association of Annaba Wilaya" },
   { icon: Rocket, text: "Goal: Build AI systems that matter, then build a startup" },
+];
+
+const memberships = [
+  { icon: Users, text: "Member, AI and Robotics Association of Annaba Wilaya — government-recognized organization promoting AI innovation in Algeria" },
+  { icon: Monitor, text: "Member, Computer Science Club at Université Badji Mokhtar, Annaba" },
 ];
 
 const AboutSection = () => {
@@ -44,12 +49,15 @@ const AboutSection = () => {
               and NoSQL Big Data pipelines.
             </p>
 
-            {/* CV Placeholder */}
-            <div className="mt-8 p-6 rounded-2xl border border-dashed border-primary/30 bg-primary/5 flex flex-col items-center gap-3">
-              <p className="text-sm text-muted-foreground">📄 Resume / CV</p>
-              <div className="px-6 py-3 rounded-xl bg-primary/10 border border-primary/20 text-primary text-sm font-medium">
-                Coming Soon — Check back later
-              </div>
+            <div className="mt-8">
+              <a
+                href="/Ramdani_Khaled_CV.pdf"
+                download
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-primary text-primary-foreground font-medium hover:bg-primary/90 transition-colors"
+              >
+                <Download size={18} />
+                Download CV / Resume
+              </a>
             </div>
           </motion.div>
 
@@ -77,6 +85,39 @@ const AboutSection = () => {
             ))}
           </motion.div>
         </div>
+
+        {/* Memberships & Activities */}
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.7, delay: 0.2 }}
+          className="mt-20"
+        >
+          <p className="text-sm font-mono text-primary mb-3 tracking-wider uppercase">
+            // Memberships & Activities
+          </p>
+          <h3 className="text-2xl md:text-3xl font-bold mb-8">
+            Community & <span className="text-gradient">Engagement</span>
+          </h3>
+          <div className="grid md:grid-cols-2 gap-4">
+            {memberships.map((m, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.1 + i * 0.1 }}
+                className="flex items-start gap-4 p-5 rounded-xl border border-border bg-card/50 card-hover"
+              >
+                <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center shrink-0 mt-0.5">
+                  <m.icon size={20} className="text-primary" />
+                </div>
+                <p className="text-muted-foreground">{m.text}</p>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
       </div>
     </section>
   );
