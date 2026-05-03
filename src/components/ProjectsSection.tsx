@@ -31,20 +31,6 @@ const projects = [
     ],
   },
   {
-    title: "Local AI Desktop Agent",
-    subtitle: "Fully Offline AI Desktop Automation",
-    status: "Shipped",
-    statusColor: "text-primary",
-    description:
-      "Fully local, offline AI desktop agent on macOS using Ollama with UI-TARS (ByteDance) for autonomous desktop automation. Zero cloud dependency, zero API cost.",
-    tech: ["Ollama", "UI-TARS", "Python", "macOS", "qwen2.5-coder"],
-    highlights: [
-      "Zero cloud dependency",
-      "Autonomous desktop control",
-      "UI-TARS integration",
-    ],
-  },
-  {
     title: "Wyag Lite",
     subtitle: "Git Reimplementation in Python",
     status: "Complete",
