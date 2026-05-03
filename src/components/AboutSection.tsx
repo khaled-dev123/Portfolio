@@ -10,7 +10,6 @@ const highlights = [
 
 const memberships = [
   { icon: Users, text: "Member, AI and Robotics Association of Annaba Wilaya — government-recognized organization promoting AI innovation in Algeria" },
-  { icon: Monitor, text: "Member, Computer Science Club at Université Badji Mokhtar, Annaba" },
 ];
 
 const AboutSection = () => {
